@@ -1,19 +1,15 @@
 import React from 'react';
-import { hydrate, render } from 'react-dom';
+// import { hydrate, render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import App from './App';
 
-const root = document.getElementById('root');
-var renderMethod;
-if (root && root.innerHTML !== '') {
-  renderMethod = hydrate;
-} else {
-  renderMethod = render;
-}
-renderMethod(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
+// const root = document.getElementById('root');
+// var renderMethod;
+// if (root && root.innerHTML !== '') {
+//   renderMethod = hydrate;
+// } else {
+//   renderMethod = render;
+// }
+// renderMethod(<App />, document.getElementById('root'));
